@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>将网页内容导出Word文档jQuery插件</title>
+<!-- <link rel="stylesheet" type="text/css" href="css/demo.css"> -->
+</head>
+<body class="mkeBody">
+<div class="mkeHeadBox">将网页内容导出Word文档jQuery插件</div>
+<div class="mkeContentBox">
+<!--效果html开始-->
+<div class="container">
+	<div class="row">
+		<div class="col-md-9" id="pagecontent">
+			<h3>秋天的韵味</h3>			
+			<table border="1">
+				<tr>
+				 <td>1111</td>
+				 <td>222</td>
+				 <td>333</td>
+				</tr>
+				<tr>
+				 <td>卡就十分</td>
+				 <td>卡就十分</td>
+				 <td>卡就十分</td>
+				</tr>
+				<tr>
+				 <td>卡就十分</td>
+				 <td>卡就十分</td>
+				 <td>卡就十分</td>
+				</tr>
+			</table>
+			<img src="http://library.magicbaba.com/img/pc/logo2017.png" class="gga">
+			
+		</div>
+		<div class="col-md-3">
+			<a class="btn btn-default jquery-word-export" href="javascript:void(0)" style="color: aqua">
+					<span class="word-icon">W</span>
+					导出为.doc文档
+				 </a>
+		</div>
+	</div>
+</div>
+
+<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="js/FileSaver.js"></script>
+<script type="text/javascript" src="js/jquery.wordexport.js"></script>
+
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+	$("a.jquery-word-export").click(function(event) {
+		$(".gga").remove();
+		$("#pagecontent").wordExport();
+	});
+});
+</script>
+
+</body>
+</html>
